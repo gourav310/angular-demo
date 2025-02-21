@@ -1,11 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ProductsService } from './products.service';
 
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css'],
 })
-export class ProductListComponent {}
+export class ProductListComponent {
+  selectedIdxParent = 0;
+  products = inject(ProductsService).getAllProducts;
+}
 
 /*
 Copyright Google LLC. All Rights Reserved.

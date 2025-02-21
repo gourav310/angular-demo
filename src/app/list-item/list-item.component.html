@@ -1,5 +1,7 @@
-<li *ngFor="let item of products">
-  <b> {{ item.name }} </b>
-  <b> {{ item.description }} </b>
-  <b> ${{ item.price }} </b>
-</li>
+<button (click)="selectedIdxHandler(index)">
+  <b [ngStyle]="{ color: index === 0 ? 'red' : 'black' }">
+    {{ products[index].name }}
+  </b>
+  <b> {{ products[index].description }} </b>
+  <b> ${{ products[index].price }} </b>
+</button>

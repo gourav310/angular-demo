@@ -1,0 +1,21 @@
+<form (submit)="onSubmit()">
+  <input
+    type="text"
+    name="name"
+    placeholder="Name"
+    [(ngModel)]="phoneItem.name"
+  />
+  <input
+    type="text"
+    name="description"
+    placeholder="Description"
+    [(ngModel)]="phoneItem.description"
+  />
+  <input
+    type="number"
+    name="price"
+    placeholder="Price"
+    [(ngModel)]="phoneItem.price"
+  />
+  <button type="submit">Add Product</button>
+</form>
